@@ -1,0 +1,122 @@
+
+class Book {
+    String title;
+    String author;
+    String isbn;
+
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+     
+
+    class BookStack {
+  
+     private Stack<Book> stack;
+
+
+
+    public BookStack() {
+
+        stack = new Stack<>();
+
+    }
+
+
+
+    public void push(Book book) {
+
+        stack.push(book);
+
+    }
+
+
+
+    public Book pop() {
+
+        return stack.pop();
+
+    }
+
+
+
+    public boolean isEmpty() {
+
+        return stack.isEmpty();
+
+    }
+    public int size() {
+
+        return stack.size();
+
+    }
+
+
+
+    public Book peek() {
+
+        return stack.peek();
+
+    }
+
+}
+
+   
+
+public class Main {
+    public static void main(String[] args) {
+        BookStack bookStack = new BookStack();
+
+        Book book1 = new Book("Animal Stories", "Maria Hoey", "978-1-60309-502-0");
+        Book book2 = new Book("Ashes", "Álvaro Ortiz", "978-1-60309-517-4");
+        Book book3 = new Book("Chester 5000", "Jess Fink", "978-1-60309-535-8");
+        Book book4 = new Book("Cosmic Cadets ", "Mimi Alves", "978-1-60309-520-4");
+        Book book5 = new Book("Cosmoknights", " Hannah Templer", "978-1-60309-454-2");
+        Book book6 = new Book("The Delicary", "Jamos Albon", "978-1-60309-492-4");
+        Book book7 = new Book("Doughnuts and Doom", " Balazs Lorinczi", "978-1-60309-513-6");
+        Book book8 = new Book("Essex County", " Jeff Lemire", "978-1-60309-038-4");
+        Book book9 = new Book("F.A.R.M. System", " Rich Koslowski", "978-1-60309-515-0");
+        Book book10 = new Book("Free Pass", "Julian Hanshaw", "978-1-60309-505-1");
+
+        bookStack.push(book1);
+        bookStack.push(book2);
+        bookStack.push(book3);
+        bookStack.push(book4);
+        bookStack.push(book5);
+        bookStack.push(book6);
+        bookStack.push(book7);
+        bookStack.push(book8);
+        bookStack.push(book9);
+        bookStack.push(book10);
+        System.out.println("Stack size: " + bookStack.size());
+
+
+
+        // Popping a book from the stack
+
+        Book poppedBook = bookStack.pop();
+
+        System.out.println("Popped book: " + poppedBook.title);
+
+        System.out.println("Stack size: " + bookStack.size());
+
+        // Checking if the stack is empty
+
+        System.out.println("Is stack empty? " + bookStack.isEmpty());
+
+
+
+        // Peeking at the top book
+
+        Book topBook = bookStack.peek();
+
+        System.out.println("Top book: " + topBook.title);
+        System.out.println("Is stack empty? " + bookStack.isEmpty());
+
+        System.out.println("Stack size: " + bookStack.size());
+    }  
+}
+        
+        
+      
