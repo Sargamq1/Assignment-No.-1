@@ -1,0 +1,79 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Athlete {
+    String name;
+    int age;
+    String ailment;
+
+
+    public Athlete(String name, int age,  String ailment) {
+        this.name = name;
+        this.age = age;
+        this.ailment = ailment;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Age: " + age + ", Ailment: " + ailment;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getAilment() {
+        return ailment;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        // Create a queue to store the patients
+        Queue<Athlete> athleteQueue = new LinkedList<>();
+
+        // Create 10 athletes and add them to the queue
+        Athlete athlete1 = new Athlete("Rose", 21, "Fever");
+        Athlete athlete2 = new Athlete("Jack", 23, "headache");
+        Athlete athlete3 = new Athlete("Charles", 28, "Sprained ankle");
+        Athlete athlete4 = new Athlete("David", 20, "Cough");
+        Athlete athlete5 = new Athlete("Anny", 26, "cold");
+        Athlete athlete6 = new Athlete("Finch", 31, "Back pain");
+        Athlete athlete7 = new Athlete("Gavy", 22, "Stomach infection");
+        Athlete athlete8 = new Athlete("Herry", 25, "Knee injury");
+        Athlete athlete9 = new Athlete("Peter", 28, "Cough");
+        Athlete athlete10 = new Athlete("James", 24, "Spine injury");
+
+        athleteQueue.add(athlete1);
+        athleteQueue.add(athlete2);
+        athleteQueue.add(athlete3);
+        athleteQueue.add(athlete4);
+        athleteQueue.add(athlete5);
+        athleteQueue.add(athlete6);
+        athleteQueue.add(athlete7);
+        athleteQueue.add(athlete8);
+        athleteQueue.add(athlete9);
+        athleteQueue.add(athlete10);
+        System.out.println("Queue size: " + athleteQueue.size());
+
+
+
+        
+        // Loop to iterate over the queue and print details of each athlete
+        System.out.println("Details of each athlete:");
+        for (Athlete athlete : athleteQueue) {
+            System.out.println(athlete);
+        }
+
+        // At the end, the queue will still contain the same athletes in the same order
+
+
+
+    }
+
+}
+
+        
+ 
